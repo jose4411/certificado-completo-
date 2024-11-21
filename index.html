@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Certificación de Buenas Prácticas Agrícolas</title>
+    <link rel="stylesheet" href="styles/styles.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <h1>Formulario de Certificación de Buenas Prácticas Agrícolas</h1>
+
+    <form id="bpaForm">
+        <!-- Información Personal -->
+        <fieldset>
+            <legend>1. Información Personal</legend>
+            Nombre completo: <input type="text" id="nombre" required><br>
+            DNI/ID: <input type="text" id="dni" required><br>
+            Fecha de nacimiento (dd/mm/aaaa): <input type="date" id="fechaNacimiento" required><br>
+            Teléfono: <input type="tel" id="telefono" required><br>
+            Correo electrónico: <input type="email" id="correo" required><br>
+        </fieldset>
+
+        <!-- Información de Ubicación -->
+        <fieldset>
+            <legend>2. Información de Ubicación</legend>
+            Dirección exacta: <input type="text" id="direccion" required><br>
+            Departamento/Provincia: <input type="text" id="departamento" required><br>
+            Distrito: <input type="text" id="distrito" required><br>
+            Comunidad: <input type="text" id="comunidad" required><br>
+            Coordenadas geográficas (opcional): <input type="text" id="coordenadas"><br>
+        </fieldset>
+
+        <!-- Información sobre la Producción -->
+        <fieldset>
+            <legend>3. Información sobre la Producción</legend>
+            Productos cultivados:<br>
+            <input type="checkbox" id="cafe" name="productos" value="Café"> Café<br>
+            <input type="checkbox" id="cacao" name="productos" value="Cacao"> Cacao<br>
+            Superficie cultivada (en hectáreas): <input type="number" id="superficie" required><br>
+            Rendimiento promedio anual (en toneladas): <input type="number" id="rendimiento" required><br>
+            ¿Pertenece a una cooperativa o asociación?<br>
+            <input type="radio" name="cooperativa" value="Sí" id="cooperativaSí"> Sí<br>
+            <input type="radio" name="cooperativa" value="No" id="cooperativaNo"> No<br>
+            Si es sí, ingrese el nombre: <input type="text" id="nombreCooperativa"><br>
+            Certificaciones actuales:<br>
+            <input type="checkbox" name="certificaciones" value="Orgánico"> Orgánico<br>
+            <input type="checkbox" name="certificaciones" value="Comercio Justo"> Comercio Justo<br>
+            <input type="checkbox" name="certificaciones" value="Rainforest Alliance"> Rainforest Alliance<br>
+            Otro (especificar): <input type="text" id="otroCertificacion"><br>
+        </fieldset>
+
+        <!-- Datos sobre Trabajadores -->
+        <fieldset>
+            <legend>4. Datos sobre Trabajadores</legend>
+            ¿Tiene trabajadores a su cargo?<br>
+            <input type="radio" name="trabajadores" value="Sí" id="trabajadoresSí"> Sí<br>
+            <input type="radio" name="trabajadores" value="No" id="trabajadoresNo"> No<br>
+        </fieldset>
+
+        <!-- Datos Legales y Administrativos -->
+        <fieldset>
+            <legend>5. Datos Legales y Administrativos</legend>
+            Registro RUC (si aplica): <input type="text" id="ruc"><br>
+            Licencia de comercialización vigente:<br>
+            <input type="radio" name="licencia" value="Sí" id="licenciaSí"> Sí<br>
+            <input type="radio" name="licencia" value="No" id="licenciaNo"> No<br>
+            Tipo de propiedad de la tierra:<br>
+            <input type="radio" name="propiedad" value="Propia" id="propiedadPropia"> Propia<br>
+            <input type="radio" name="propiedad" value="Arrendada" id="propiedadArrendada"> Arrendada<br>
+            <input type="radio" name="propiedad" value="Comunal" id="propiedadComunal"> Comunal<br>
+        </fieldset>
+
+        <!-- Necesidades y Soporte Técnico -->
+        <fieldset>
+            <legend>6. Necesidades y Soporte Técnico</legend>
+            ¿Qué tipo de apoyo requiere?<br>
+            <input type="checkbox" name="apoyo" value="Asistencia técnica"> Asistencia técnica<br>
+            <input type="checkbox" name="apoyo" value="Financiamiento"> Financiamiento<br>
+            <input type="checkbox" name="apoyo" value="Acceso a mercados"> Acceso a mercados<br>
+            <input type="checkbox" name="apoyo" value="Capacitación"> Capacitación<br>
+            Otro (especificar): <input type="text" id="otroApoyo"><br>
+        </fieldset>
+
+        <!-- Declaración y Firma -->
+        <fieldset>
+            <legend>7. Declaración y Firma</legend>
+            Declaro que la información proporcionada es verdadera y autorizo su uso para fines de registro y certificación.<br>
+            Firma: <input type="text" id="firma" required><br>
+            Fecha (dd/mm/aaaa): <input type="date" id="fechaFirma" required><br>
+            <button type="submit">Enviar</button>
+        </fieldset>
+    </form>
+
+    <!-- Resultado -->
+    <div id="resultado" style="display:none;">
+        <h2>Resultado de la Evaluación</h2>
+        <p id="mensajeResultado"></p>
+    </div>
+
+    <script src="scripts/scripts.js"></script> <!-- Enlace al archivo JavaScript -->
+</body>
+</html>
